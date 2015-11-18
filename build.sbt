@@ -10,7 +10,7 @@ lazy val root = (project in file(".")).settings(
   autoScalaLibrary := false,
   libraryDependencies ++= Seq(
     "ch.qos.logback" % "logback-classic" % "1.1.3"  % Compile exclude("org.slf4j", "slf4j-api"),
-    "org.slf4j"      % "slf4j-api"       % "1.7.12" % Compile
+    "org.slf4j"      % "slf4j-api"       % "1.7.13" % Compile
   ),
   publishTo <<= version { (v: String) =>
     val nexus = "https://oss.sonatype.org/"
