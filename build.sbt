@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).settings(
   organization := "org.skinny-framework",
   name         := "skinny-logback",
-  version      := "1.0.7",
+  version      := "1.0.8-SNAPSHOT",
   resolvers ++= Seq(
     "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"
     //,"sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
