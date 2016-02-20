@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).settings(
   organization := "org.skinny-framework",
   name         := "skinny-logback",
-  version      := "1.0.8-SNAPSHOT",
+  version      := "1.0.8",
   resolvers ++= Seq(
     "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"
     //,"sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
@@ -9,7 +9,7 @@ lazy val root = (project in file(".")).settings(
   crossPaths       := false,
   autoScalaLibrary := false,
   libraryDependencies ++= Seq(
-    "ch.qos.logback" % "logback-classic" % "1.1.4"  % Compile exclude("org.slf4j", "slf4j-api"),
+    "ch.qos.logback" % "logback-classic" % "1.1.5"  % Compile exclude("org.slf4j", "slf4j-api"),
     "org.slf4j"      % "slf4j-api"       % "1.7.16" % Compile
   ),
   publishTo <<= version { (v: String) =>
@@ -28,7 +28,6 @@ lazy val root = (project in file(".")).settings(
   transitiveClassifiers in Global := Seq(Artifact.SourceClassifier),
   incOptions := incOptions.value.withNameHashing(true),
   logBuffered in Test := false,
-  javaOptions in Test ++= Seq("-Dskinny.env=test"),
   updateOptions := updateOptions.value.withCachedResolution(true),
   javacOptions ++= Seq("-source", "1.7", "-target", "1.7", "-encoding", "UTF-8", "-Xlint:-options"),
   javacOptions in doc := Seq("-source", "1.7"),
@@ -52,4 +51,4 @@ lazy val root = (project in file(".")).settings(
           <url>http://git.io/sera</url>
         </developer>
       </developers>
-).settings(scalariformSettings)
+)
