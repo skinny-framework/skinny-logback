@@ -5,13 +5,13 @@ A useful logback library.
 ### build.sbt
 
 ```scala
-libraryDependencies += "org.skinny-framework" % "skinny-logback" % "1.0.8"
+libraryDependencies += "org.skinny-framework" % "skinny-logback" % "1.0.9"
 ```
 
 ### build.gradle
 
 ```
-compile 'org.skinny-framework:skinny-logback:1.0.8'
+compile 'org.skinny-framework:skinny-logback:1.0.9'
 ```
 
 ### pom.xml
@@ -20,7 +20,7 @@ compile 'org.skinny-framework:skinny-logback:1.0.8'
 <dependency>
     <groupId>org.skinny-framework</groupId>
     <artifactId>skinny-logback</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
 </dependency>
 ```
 

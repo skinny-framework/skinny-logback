@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).settings(
   organization := "org.skinny-framework",
   name         := "skinny-logback",
-  version      := "1.0.8",
+  version      := "1.0.9",
   resolvers ++= Seq(
     "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"
     //,"sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
@@ -9,8 +9,8 @@ lazy val root = (project in file(".")).settings(
   crossPaths       := false,
   autoScalaLibrary := false,
   libraryDependencies ++= Seq(
-    "ch.qos.logback" % "logback-classic" % "1.1.5"  % Compile exclude("org.slf4j", "slf4j-api"),
-    "org.slf4j"      % "slf4j-api"       % "1.7.16" % Compile
+    "ch.qos.logback" % "logback-classic" % "1.1.7"  % Compile exclude("org.slf4j", "slf4j-api"),
+    "org.slf4j"      % "slf4j-api"       % "1.7.21" % Compile
   ),
   publishTo <<= version { (v: String) =>
     val nexus = "https://oss.sonatype.org/"
@@ -19,7 +19,7 @@ lazy val root = (project in file(".")).settings(
   },
   publishMavenStyle := true,
   sbtPlugin := false,
-  scalaVersion := "2.11.7",
+  scalaVersion := "2.11.8",
   ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) },
   scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature"),
   publishMavenStyle := true,
