@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).settings(
   organization := "org.skinny-framework",
   name         := "skinny-logback",
-  version      := "1.0.11",
+  version      := "1.0.12",
   resolvers ++= Seq(
     "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"
     //,"sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
@@ -9,12 +9,12 @@ lazy val root = (project in file(".")).settings(
   crossPaths       := false,
   autoScalaLibrary := false,
   libraryDependencies ++= Seq(
-    "ch.qos.logback" % "logback-classic" % "1.1.9"  % Compile exclude("org.slf4j", "slf4j-api"),
-    "org.slf4j"      % "slf4j-api"       % "1.7.22" % Compile
+    "ch.qos.logback" % "logback-classic" % "1.1.10" % Compile exclude("org.slf4j", "slf4j-api"),
+    "org.slf4j"      % "slf4j-api"       % "1.7.23" % Compile
   ),
-  publishTo <<= version { (v: String) =>
+  publishTo := {
     val nexus = "https://oss.sonatype.org/"
-    if (v.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
+    if (version.value.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
     else Some("releases" at nexus + "service/local/staging/deploy/maven2")
   },
   publishMavenStyle := true,
